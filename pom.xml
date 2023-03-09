@@ -279,21 +279,6 @@
         </configuration>
       </plugin>
 
-      <!-- ktlint for code style -->
-      <plugin>
-        <groupId>com.github.gantsign.maven</groupId>
-        <artifactId>ktlint-maven-plugin</artifactId>
-        <version>${ktlint-maven-plugin.version}</version>
-        <executions>
-          <execution>
-            <id>check</id>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
     </plugins>
   </build>
 
