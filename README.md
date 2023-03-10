@@ -34,10 +34,6 @@ The responsibility is limited to:
 
 * Kotlin code style, compiler jvm-target and build source encoding properties
 
-
-* Ktlint setup for code linting
-
-
 The parent pom should NOT be used for:
 
 * Dependency management: Dependencies will vary. Adding dependency management to the parent pom creates a lot

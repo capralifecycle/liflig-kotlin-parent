@@ -35,9 +35,6 @@
 
     * Kotlin code style, compiler jvm-target and build source encoding properties
 
-    * Ktlint setup for code linting
-
-
     The parent pom should NOT be used for:
 
     * Dependency management - dependencies will wary, adding dependency management to the parent pom creates a lot
@@ -65,8 +62,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <kotlin.code.style>official</kotlin.code.style>
     <kotlin.version>1.8.10</kotlin.version>
-
-    <ktlint-maven-plugin.version>1.16.0</ktlint-maven-plugin.version>
 
     <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.5.0</maven-assembly-plugin.version>
