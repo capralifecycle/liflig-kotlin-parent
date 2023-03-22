@@ -17,7 +17,7 @@ The responsibility is limited to:
   See description of recommendation here: https://maven.apache.org/guides/mini/guide-configuring-plugins.html.
 
 
-* Maven version enforcement: Ensure minimum maven version used  
+* Maven version enforcement: Ensure minimum maven version used
 
 
 * plugin to create flattened pom for automatic releases
@@ -45,5 +45,3 @@ The parent pom should NOT be used for:
 
 
 * Reporting - maven reporting support is not that popular anymore
-
-
