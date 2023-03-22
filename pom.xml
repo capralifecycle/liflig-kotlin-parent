@@ -15,11 +15,12 @@
     It should be minimal and non-intrusive - less is more.
     The responsibility is limited to:
 
-    * Default distribution management: default OSS repositories for snapshots and releases (capra-releases/capra-snapshots).
+    * Default distribution management: default OSS repositories for snapshots and releases
+    (capra-releases/capra-snapshots).
     It is possible to override this setting to use a customer project repository instead of the default, shared OSS
     repository.
 
-    * Plugin management:  specify versions of build plugins to ensure build reproducibility.
+    * Plugin management: specify versions of build plugins to ensure build reproducibility.
     Only plugins used by _most_ projects should be added.
     See description of recommendation here: https://maven.apache.org/guides/mini/guide-configuring-plugins.html.
 
@@ -269,7 +270,7 @@
             <include>**/*Test.*</include>
           </includes>
           <excludes>
-              <exclude>**/*IntegrationSpec.*</exclude>
+            <exclude>**/*IntegrationSpec.*</exclude>
           </excludes>
         </configuration>
       </plugin>
