@@ -203,6 +203,7 @@
                 <requireMavenVersion>
                   <version>${maven-enforcer-required-maven-version}</version>
                 </requireMavenVersion>
+                <banDuplicatePomDependencyVersions/>
               </rules>
             </configuration>
           </execution>
@@ -302,5 +303,6 @@
 
     </plugins>
   </build>
+
 
 </project>
