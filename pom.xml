@@ -271,6 +271,9 @@
           <includes>
             <include>**/*Spec.*</include>
             <include>**/*Test.*</include>
+            <include>**/*Tests.*</include>
+            <include>**/*TestCase.*</include>
+            <include>**/Test*.*</include>
           </includes>
           <excludes>
             <exclude>**/*IntegrationSpec.*</exclude>
