@@ -166,6 +166,21 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
           <version>${maven-shade-plugin.version}</version>
+          <configuration>
+            <!-- Always use the file target/app.jar, whatever version/name we have.
+            Makes it easier to reference in Dockerfile -->
+            <finalName>app</finalName>
+            <filters>
+              <filter>
+                <artifact>*:*</artifact>
+                <excludes>
+                  <exclude>META-INF/*.SF</exclude>
+                  <exclude>META-INF/*.DSA</exclude>
+                  <exclude>META-INF/*.RSA</exclude>
+                </excludes>
+              </filter>
+            </filters>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -187,12 +202,12 @@
 
     <plugins>
 
-      <!--
-      Use enforcer instead of prerequisites to validate maven version
-      https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
-      https://maven.apache.org/docs/history.html, 3.1.1 is the latest before Java 6 is required.
-      -->
       <plugin>
+        <!--
+        Use enforcer instead of prerequisites to validate maven version
+        https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+        https://maven.apache.org/docs/history.html, 3.1.1 is the latest before Java 6 is required.
+        -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>${maven-enforcer-plugin.version}</version>
@@ -214,8 +229,8 @@
         </executions>
       </plugin>
 
-      <!-- Create correct pom for automated releases -->
       <plugin>
+        <!-- Create correct pom for automated releases -->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
         <version>${flatten-maven-plugin.version}</version>
@@ -242,8 +257,8 @@
         </executions>
       </plugin>
 
-      <!-- Compiling -->
       <plugin>
+        <!-- Compiling -->
         <groupId>org.jetbrains.kotlin</groupId>
         <artifactId>kotlin-maven-plugin</artifactId>
         <version>${kotlin.version}</version>
@@ -265,9 +280,9 @@
         </executions>
       </plugin>
 
-      <!-- Include test files with name ending with ..Spec. As we override the config, we need to include *Test* as well
-       since we lose the Surefire defaults (which includes *Test.* among others) when overriding -->
       <plugin>
+        <!-- Include test files with name ending with ..Spec. As we override the config, we need to include *Test* as well
+       since we lose the Surefire defaults (which includes *Test.* among others) when overriding -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
@@ -285,8 +300,8 @@
         </configuration>
       </plugin>
 
-      <!-- spotless with ktfmt for code style -->
       <plugin>
+        <!-- spotless with ktfmt for code style -->
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
         <version>${spotless-maven-plugin.version}</version>
@@ -310,6 +325,4 @@
 
     </plugins>
   </build>
-
-
 </project>
