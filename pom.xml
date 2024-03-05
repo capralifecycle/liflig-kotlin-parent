@@ -315,6 +315,7 @@
         </executions>
         <configuration>
           <kotlin>
+            <toggleOffOn />
             <ktfmt>
               <version>${ktfmt.version}</version>
               <style>DEFAULT</style>
