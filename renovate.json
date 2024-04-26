@@ -1,5 +1,15 @@
 {
-  "extends": ["github>capraconsulting/renovate-config:default"],
+  "extends": [
+    "github>capraconsulting/renovate-config:default"
+  ],
   "automerge": true,
-  "automergeType": "branch"
+  "automergeType": "branch",
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "org.apache.maven.plugins:maven-shade-plugin"
+      ],
+      "allowedVersions": "3.2.4"
+    }
+  ]
 }
