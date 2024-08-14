@@ -57,12 +57,12 @@
 
   <properties>
     <!-- Increment major version for breaking changes -->
-    <major-version>2</major-version>
+    <major-version>3</major-version>
     <revision>${major-version}.local-SNAPSHOT</revision>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <kotlin.code.style>official</kotlin.code.style>
-    <kotlin.version>1.9.25</kotlin.version>
+    <kotlin.version>2.0.10</kotlin.version>
 
     <java.version>17</java.version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
