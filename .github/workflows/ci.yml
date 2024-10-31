@@ -68,7 +68,7 @@ jobs:
           if [ "$CONDITIONAL_RELEASE" = "true" ]; then
             echo "Releasing library with tag '$TAG'"
             mvn -B source:jar deploy \
-              -DaltReleaseDeploymentRepository="github::default::https://maven.pkg.github.com/capralifecycle/liflig-kotlin-parent" \
+              -DaltReleaseDeploymentRepository="github::https://maven.pkg.github.com/capralifecycle/liflig-kotlin-parent" \
               scm:tag -Drevision="$TAG" -Dtag="$TAG" \
               org.apache.maven.plugins:maven-enforcer-plugin:3.5.0:enforce -Denforcer.rules=requireReleaseDeps
           else
