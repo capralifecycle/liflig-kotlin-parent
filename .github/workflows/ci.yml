@@ -28,7 +28,7 @@ jobs:
       - uses: capralifecycle/actions-lib/check-runtime-dependencies@6c25c0dad45e4ddd0441d88e8e0fa48bbd29ca59
 
       - name: cache mvn
-        uses: actions/cache@6849a6489940f00c2f30c0fb92c6274307ccb58a
+        uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
