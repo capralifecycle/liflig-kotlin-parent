@@ -68,6 +68,7 @@
     <kotlin.code.style>official</kotlin.code.style>
     <kotlin.version>2.1.21</kotlin.version>
     <kotlin.compiler.apiVersion>2.1</kotlin.compiler.apiVersion>
+    <kotlin.compiler.languageVersion>2.1</kotlin.compiler.languageVersion>
 
     <java.version>17</java.version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
