@@ -9,7 +9,7 @@
       "matchPackageNames": [
         "org.apache.maven.plugins:maven-surefire-plugin"
       ],
-      "allowedVersions": "3.5.6"
+      "allowedVersions": "!/3.6.0/"
     },
     {
       "matchPackageNames": [
